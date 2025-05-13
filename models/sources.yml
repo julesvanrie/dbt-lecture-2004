@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_data_circle     # schema in dbt = dataset in bigquery
+    tables:
+      - name: sales
+        identifier: raw_cc_sales   # identifier in dbt = table in bigquery
+      - name: stock
+        identifier: raw_cc_stock
