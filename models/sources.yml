@@ -16,7 +16,6 @@ sources:
         tests:
           - unique:
               column_name: "date_date || product_id"
-          
               
       - name: stock
         identifier: raw_cc_stock
@@ -24,4 +23,33 @@ sources:
           - name: model
             tests:
               - not_null
+
+      - name: parcel
+        identifier: raw_cc_parcel
+        columns:
+          - name: parcel_id
+            tests:
+              - not_null
+              - unique
+          - name: date_purchase
+            tests:
+              - not_null
               
+
+      - name: parcel_product
+        identifier: raw_cc_parcel_product
+        columns:
+          - name: parcel_id
+            tests:
+              - not_null
+          - name: model_mame
+            tests:
+              - not_null
+        tests:
+          - unique:
+              column_name: "parcel_id || model_mame"
+          - not_null:
+              column_name: "parcel_id || model_mame"
+
+
+
