@@ -9,7 +9,7 @@ source as (
 renamed as (
 
     select
-        concat(model, "_", color, "_", size) as pdt_id,
+        concat(model, "_", color, "_", ifnull(size, "no-size")) as pdt_id,
         model,
         model_name,
         color,
