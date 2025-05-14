@@ -1,6 +1,6 @@
 select
     *
-
+    ,{{ price_cat('price') }} as price_cat
 from 
     {{ ref("stg_raw__sales") }} as sales
 join 
