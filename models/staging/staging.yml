@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_raw__stock
+    columns:
+      - name: pdt_id
+        description: "Unique product id combining model_id, color, size"
+        tests:
+          - unique
+          - not_null
+      - name: model
+        tests:
+          - not_null
+      - name: color
+
