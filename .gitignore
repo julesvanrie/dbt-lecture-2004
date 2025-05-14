@@ -3,3 +3,6 @@
 target/
 dbt_packages/
 logs/
+!target/index.html
+!target/manifest.json
+!target/catalog.json
