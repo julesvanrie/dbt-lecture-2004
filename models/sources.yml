@@ -16,6 +16,10 @@ sources:
         tests:
           - unique:
               column_name: "date_date || product_id"
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - date_date
+                - product_id
               
       - name: stock
         identifier: raw_cc_stock

@@ -12,4 +12,7 @@ models:
         tests:
           - not_null
       - name: color
+        tests:
+          - no_color:
+              color: 'PU'
 

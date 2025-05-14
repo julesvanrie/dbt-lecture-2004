@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_stock_sales
+    columns:
+      - name: color
+        tests:
+          - no_color:
+              color: 'BL'
+          - dbt_utils.not_accepted_values:
+              values: ['BL', 'PU']
