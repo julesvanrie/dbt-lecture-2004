@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with tmp as (
     select
         date_trunc(date_date, month) as year_month
